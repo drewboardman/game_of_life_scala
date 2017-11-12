@@ -19,3 +19,4 @@ TODO
   - maybe it should be in a totally seperate file `CellConverter`
 - Would like to convert `Board#tick` to use for comprehension
   - they get weird about `Vector` vs `IndexedSeq`
+- Maybe kill cells at borders of `Board`

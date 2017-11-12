@@ -1,6 +1,9 @@
 package com.drew.life
 
 case class Board(val cellMatrix: Vector[Vector[Cell]]) {
+  val height: Int = cellMatrix.size
+  val width: Int = cellMatrix.head.size
+
   def aliveNeighborCount(x: Int, y: Int): Int = ???
 }
 

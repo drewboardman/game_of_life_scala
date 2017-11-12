@@ -18,7 +18,7 @@ class BoardSpec extends FunSpec with Matchers {
       }
     }
 
-    describe("generate") {
+    describe("apply") {
       it("takes a string template and converts it to Cells") {
         val generated =
           Vector(
@@ -28,6 +28,8 @@ class BoardSpec extends FunSpec with Matchers {
           )
         val board = Board(strTemplate)
         (board.cellMatrix).shouldEqual(generated)
+        (board.width).shouldEqual(3)
+        (board.height).shouldEqual(3)
       }
     }
   }

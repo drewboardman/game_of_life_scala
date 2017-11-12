@@ -18,6 +18,9 @@ class BoardSpec extends FunSpec with Matchers {
       }
     }
 
+    describe("tick") {
+    }
+
     describe("apply") {
       it("takes a string template and converts it to Cells") {
         val generated =

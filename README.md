@@ -12,3 +12,8 @@ TODO
 ----
  * add scalaStyle
  * add wartRemover
+ * maybe `Board.apply` should take a `strTemplate` and `generate` should convert to the `cellMatrix`
+    - meaning should I switch the argument types?
+ * object Cell#convert
+    - should that somehow be on the trait?
+    - maybe it should be in a totally seperate file `CellConverter`

@@ -23,6 +23,10 @@ sbt
 sbt:game-of-life> run
 ```
 
+Right now there isn't any user input. To try another board, simply add it to the `BoardTemplates` object.
+  - You'll need to change the line in `Game#start` to use your new template
+  - You are also restricted to `n * n` board sizes
+
 TODO
 ----
 - add `scalaStyle`

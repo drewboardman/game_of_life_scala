@@ -29,6 +29,8 @@ Right now there isn't any user input. To try another board, simply add it to the
 
 TODO
 ----
+- allow for better user input
+  - ability to add and select boards through a cli
 - add `scalaStyle`
 - add `wartRemover`
 - right now `Board` has multiple applys

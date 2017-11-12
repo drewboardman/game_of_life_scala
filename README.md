@@ -30,8 +30,8 @@ Right now there isn't any user input. To try another board, simply add it to the
 TODO
 ----
 - allow for better user input
+  - click on cell to turn it alive
   - ability to add and select boards through a cli
-- Maybe kill cells at borders of `Board`
 
 #### Possible code tweaks
 - right now `Board` has multiple applys

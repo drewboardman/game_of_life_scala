@@ -8,6 +8,21 @@ Conway's Game of Life
  3. Any live cell with more than three live neighbours dies, as if by over-population.
  4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
+## Usage
+
+You'll probably need to install javafx. On Ubuntu install the following package
+
+```
+sudo apt-get install openjfx
+```
+
+Clone the repo, run the application
+
+```
+sbt
+sbt:game-of-life> run
+```
+
 TODO
 ----
 - add `scalaStyle`

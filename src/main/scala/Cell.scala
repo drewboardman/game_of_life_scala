@@ -1,6 +1,8 @@
 package com.drew.life
 
-sealed trait Cell
+sealed trait Cell {
+  def liveOrDie(aliveNeighbors: Int): Cell
+}
 
 final case object Alive extends Cell {
   def liveOrDie(aliveNeighbors: Int): Cell = {

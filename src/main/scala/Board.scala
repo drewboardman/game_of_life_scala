@@ -4,6 +4,18 @@ case class Board(val cellMatrix: Vector[Vector[Cell]]) {
   val height: Int = cellMatrix.size
   val width: Int = cellMatrix.head.size
 
+  def tick: Board = {
+    val nextGeneration =
+      (0 until width).map { x =>
+        (0 until height).map { y =>
+          val cell = cellMatrix(x)(y)
+          val livingNeighbors = aliveNeighborCount(x,y)
+          cell.liveOrDie(livingNeighbors)
+        }.to[Vector]
+      }.to[Vector]
+    Board(nextGeneration)
+  }
+
   def aliveNeighborCount(x: Int, y: Int): Int = {
     val neighbors = List(
       (x-1, y-1), (x, y-1), (x+1, y-1),

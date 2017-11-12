@@ -8,6 +8,10 @@ class BoardSpec extends FunSpec with Matchers {
                         |---
                         |-+-""".stripMargin
 
+    val nextGen = """+-+
+                    |-+-
+                    |-+-""".stripMargin
+
     describe("aliveNeighborCount") {
       it("returns the correct alive neighbor count") {
         val board = Board(strTemplate)
@@ -19,6 +23,16 @@ class BoardSpec extends FunSpec with Matchers {
     }
 
     describe("tick") {
+      it("generates the correct next board") {
+        val board = Board(strTemplate)
+        val generated =
+          Vector(
+            Vector(Dead,  Dead,  Dead),
+            Vector(Dead,  Alive, Dead ),
+            Vector(Dead,  Dead,  Dead )
+          )
+        (board.tick).shouldEqual(Board(generated))
+      }
     }
 
     describe("apply") {

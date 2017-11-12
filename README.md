@@ -31,13 +31,12 @@ TODO
 ----
 - allow for better user input
   - ability to add and select boards through a cli
-- add `scalaStyle`
-- add `wartRemover`
+- Maybe kill cells at borders of `Board`
+
+#### Possible code tweaks
 - right now `Board` has multiple applys
   - I originally had an apply that take `Vector[Vector[Cell]]` and a `generate` that took `String => Board`
-- object Cell#convert
-  - should that somehow be on the trait?
-  - maybe it should be in a totally seperate file `CellConverter`
+- object `Cell` has a method `convert`
+  - maybe it should be in a seperate object `CellConverter`
 - Would like to convert `Board#tick` to use for comprehension
   - they get weird about `Vector` vs `IndexedSeq`
-- Maybe kill cells at borders of `Board`

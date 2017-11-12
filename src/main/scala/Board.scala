@@ -4,7 +4,33 @@ case class Board(val cellMatrix: Vector[Vector[Cell]]) {
   val height: Int = cellMatrix.size
   val width: Int = cellMatrix.head.size
 
-  def aliveNeighborCount(x: Int, y: Int): Int = ???
+  def aliveNeighborCount(x: Int, y: Int): Int = {
+    val neighbors = List(
+      (x-1, y-1), (x, y-1), (x+1, y-1),
+      (x-1, y  ),           (x+1, y  ),
+      (x-1, y-2), (x, y-2), (x+1, y-2)
+    )
+
+    val toCells = 
+      for (neighbor <- neighbors) yield {
+        val (neighborX, neighborY) = neighbor
+        cellMatrix(neighborX)(neighborY)
+      }
+
+    toCells.filterNot(_ == Alive).size
+  }
+
+  private def filterNeighbors(neighbors: List[(Int,Int)]): List[(Int, Int)] = {
+    val xBound = width - 1
+    val yBound = height - 1
+    neighbors.filter { neighbor =>
+        neighbor match {
+          case (fx, fy) if (fx < 0) | (fy < 0) => false
+          case (fx, fy) if (fx > xBound) | (fy > yBound) => false
+          case _ => true
+        }
+    }
+  }
 }
 
 object Board {

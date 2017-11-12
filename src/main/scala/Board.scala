@@ -8,16 +8,18 @@ case class Board(val cellMatrix: Vector[Vector[Cell]]) {
     val neighbors = List(
       (x-1, y-1), (x, y-1), (x+1, y-1),
       (x-1, y  ),           (x+1, y  ),
-      (x-1, y-2), (x, y-2), (x+1, y-2)
+      (x-1, y+1), (x, y+1), (x+1, y+1)
     )
 
+    val filteredNeighbors = filterNeighbors(neighbors)
+
     val toCells = 
-      for (neighbor <- neighbors) yield {
+      for (neighbor <- filteredNeighbors) yield {
         val (neighborX, neighborY) = neighbor
         cellMatrix(neighborX)(neighborY)
       }
 
-    toCells.filterNot(_ == Alive).size
+    toCells.filter(_ == Alive).size
   }
 
   private def filterNeighbors(neighbors: List[(Int,Int)]): List[(Int, Int)] = {

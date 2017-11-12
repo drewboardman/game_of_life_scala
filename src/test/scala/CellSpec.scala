@@ -13,16 +13,5 @@ class CellSpec extends FunSpec with Matchers {
         (Cell.convert('-')).shouldEqual(Dead)
       }
     }
-  //   describe("Alive") {
-  //     it("creates + symbol to express Alive Cells on the Board") {
-  //       (Alive(1,2).symbol).shouldEqual("+")
-  //     }
-  //   }
-
-  //   describe("Dead") {
-  //     it("creates - symbol to express Dead Cells on the Board") {
-  //       (Dead(1,2).symbol).shouldEqual("-")
-  //     }
-  //   }
   }
 }

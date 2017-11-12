@@ -6,11 +6,11 @@ class CellSpec extends FunSpec with Matchers {
   describe("Cell") {
     describe("convert") {
       it("converts a + to Alive cell") {
-        (Cell.convert("+")).shouldEqual(Alive)
+        (Cell.convert('+')).shouldEqual(Alive)
       }
 
       it("converts a - to Dead cell") {
-        (Cell.convert("-")).shouldEqual(Dead)
+        (Cell.convert('-')).shouldEqual(Dead)
       }
     }
   //   describe("Alive") {

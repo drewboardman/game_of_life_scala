@@ -15,10 +15,10 @@ final case object Dead extends Cell {
 // this doesn't really need to be in this file
 // makes it nice for syntax though
 object Cell {
-  def convert(str: String) = {
-    str match {
-      case "+" => Alive
-      case "-" => Dead
+  def convert(symbol: Char) = {
+    symbol match {
+      case '+' => Alive
+      case '-' => Dead
     }
   }
 }

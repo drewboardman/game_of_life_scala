@@ -10,12 +10,12 @@ Conway's Game of Life
 
 TODO
 ----
- * add scalaStyle
- * add wartRemover
- * right now Board has multiple applys
+- add `scalaStyle`
+- add `wartRemover`
+- right now `Board` has multiple applys
   - I originally had an apply that take `Vector[Vector[Cell]]` and a `generate` that took `String => Board`
- * object Cell#convert
-    - should that somehow be on the trait?
-    - maybe it should be in a totally seperate file `CellConverter`
- * Would like to convert `Board#tick` to use for comprehension
+- object Cell#convert
+  - should that somehow be on the trait?
+  - maybe it should be in a totally seperate file `CellConverter`
+- Would like to convert `Board#tick` to use for comprehension
   - they get weird about `Vector` vs `IndexedSeq`

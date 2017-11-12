@@ -12,8 +12,8 @@ object BoardTemplates {
                    |+--+-+-+-+
                    |+---++---+""".stripMargin
 
-  val gliderGun ="""----------------------------------------
-                   |----------------------------------------
+  val gliderGunRaw =
+                 """----------------------------------------
                    |----------------------------------------
                    |--------------------+-------------------
                    |------------------+-+-------------------
@@ -51,5 +51,23 @@ object BoardTemplates {
                    |----------------------------------------
                    |----------------------------------------
                    |----------------------------------------
+                   |----------------------------------------
                    |----------------------------------------""".stripMargin
+
+  val gliderGun = pad(gliderGunRaw)
+
+  def pad(template: String): String = {
+    val xBuffer = ("-" * 50)
+    val lines = template
+      .split("\n")
+      .toList
+      .map { line =>
+        xBuffer + line + xBuffer
+      }
+    val yBuffer = (0 until 50).toList.map { _ =>
+      val mult = lines.head.size
+      ("-" * mult)
+    }
+   (yBuffer ::: lines ::: yBuffer).mkString("\n")
+  }
 }

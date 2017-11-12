@@ -2,11 +2,7 @@ package com.drew.life
 
 import scalafx.animation.AnimationTimer
 import scalafx.application.JFXApp
-import scalafx.application.JFXApp.PrimaryStage
-import scalafx.scene.Scene
 import scalafx.scene.canvas.{Canvas, GraphicsContext}
-import scalafx.scene.paint.Color._
-import scalafx.scene.text.Text
 
 object Game extends JFXApp {
 

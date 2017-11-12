@@ -1,6 +1,8 @@
 Conway's Game of Life
 ====================
 
+![Glider template in action](screenshot.png)
+
 ## Rules
 
  1. Any live cell with fewer than two live neighbours dies, as if caused by under-population.

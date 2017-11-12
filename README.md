@@ -1,7 +1,7 @@
 Conway's Game of Life
 ====================
 
-![Glider template in action](screenshot.png)
+![Glider template in action](action.gif)
 
 ## Rules
 
